@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube मुक्त साधन</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+            background:#111;
+            color:white;
+            padding:20px;
+        }
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px;
+            border-radius:5px;
+            border:none;
+        }
+        button{
+            padding:10px 20px;
+            background:red;
+            color:white;
+            border:none;
+            border-radius:5px;
+        }
+        .box{
+            background:#222;
+            padding:15px;
+            margin-top:20px;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🔥 YouTube Tools</h1>
+
+<div class="box">
+<h2>Title Generator</h2>
+<input type="text" id="keyword" placeholder="Enter keyword">
+<br>
+<button onclick="generateTitle()">Generate validating content</button>
+<p id="result"></p>
+</div>
+
+<script>
+function generateTitle(){
+    var_middle_keyword = document.getElementById("keyword").value;
+    var titles = [
+        "Best " + keyword + " Tips in 2026 🔥",
+        keyword + " Tutorial for Beginners",
+        "How to Grow Fast with " + keyword,
+        "Secret Strategy of " + keyword
+    ];
+    var random = titles[Math.floor(Math.random()*titles.length)];
+    document.getElementById("result").innerText = random;
+}
+</script>
+
+</body>
+</html> 
